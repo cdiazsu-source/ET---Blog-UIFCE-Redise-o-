@@ -1,7 +1,3 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <title>Blog UIFCE Clon</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -330,6 +326,60 @@ body{padding-bottom:0}
 @media (max-width:900px){.b-main{grid-template-columns:1fr}.b-menu{flex-direction:row;overflow-x:auto;gap:4px}.b-menu button{white-space:nowrap;padding:14px 16px;border-bottom:0}.b-posts{grid-template-columns:1fr 1fr}.b-band-in{grid-template-columns:1fr}}
 @media (max-width:560px){.b-posts{grid-template-columns:1fr}}
 
+/* ================= RECURSOS PARA DOCENTES (A y B) ================= */
+#vista-recursos{font-family:var(--f-blog);padding-bottom:110px}
+#vista-recursos.va{background:#fff}
+#vista-recursos.vb{background:#e2e5e7}
+.rc-wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.rc-crumb{font-size:.78rem;color:#4a555c;padding:9px 0}
+.va .rc-crumb{background:#f4f8fa;border-bottom:1px solid var(--borde)}
+.vb .rc-crumb{background:#f6f7f8;border-bottom:1px solid #d4d9dc}
+.rc-crumb a{font-weight:700;text-decoration:none;color:#0d6a68}
+.rc-head{padding:34px 0 8px}
+.rc-head h2{margin:0;font-weight:900;line-height:1.08;letter-spacing:-.01em}
+.va .rc-head h2{font-size:clamp(2rem,4.6vw,3rem);color:var(--blog-azul)}
+.vb .rc-head h2{font-family:var(--f-serif);font-weight:700;font-size:clamp(2rem,4vw,2.8rem);color:#2b2b2b;letter-spacing:.01em}
+.rc-head .lead{margin:12px 0 0;max-width:44em;font-size:1.05rem;line-height:1.55;color:var(--texto)}
+.rc-filter{display:flex;margin-top:18px;max-width:420px;background:#fff;overflow:hidden}
+.va .rc-filter{border:2px solid #4a89bf;border-radius:999px;padding:0 6px 0 18px}
+.vb .rc-filter{border:2px solid #2a9490;border-radius:6px}
+.rc-filter:focus-within{box-shadow:0 0 0 4px rgba(0,113,161,.2)}
+.rc-filter input{flex:1;min-width:0;border:0;outline:0;background:none;font:inherit;padding:10px 12px}
+.rc-chips{position:sticky;top:0;z-index:20;background:#fff;display:flex;gap:8px;flex-wrap:wrap;padding:12px 0;margin-top:14px;border-bottom:1px solid var(--borde)}
+.rc-chip{border:1px solid #b9cad6;background:#fff;color:var(--blog-azul);border-radius:999px;padding:6px 14px;font:inherit;font-size:.86rem;font-weight:500;cursor:pointer}
+.rc-chip:hover{background:var(--blog-azul);border-color:var(--blog-azul);color:#fff}
+.rc-chip b{font-weight:700;opacity:.6;margin-left:4px}
+.rc-chip:hover b{opacity:.85}
+.rc-sec{padding-top:36px;scroll-margin-top:70px}
+.rc-sec h3{margin:0;font-size:1.35rem;font-weight:900;color:var(--blog-azul);line-height:1.25}
+.rc-sec .d{margin:4px 0 16px;color:#5a6872}
+.rc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.rc-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--borde);border-radius:12px;padding:18px;transition:transform .18s,box-shadow .18s,border-color .18s}
+.rc-card:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(35,50,82,.12);border-color:#b9cad6}
+.rc-card .mono{flex:none;width:46px;height:46px;border-radius:12px;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:900;font-size:1rem;letter-spacing:-.02em}
+.rc-card .mono.dk{color:#222}
+.rc-card h4{margin:0 0 3px;font-size:1.05rem;color:var(--blog-azul);line-height:1.25}
+.rc-card p{margin:0;font-size:.9rem;line-height:1.45;color:#4d5a62}
+.rc-vacio{padding:40px 0;color:#5a6872}
+.rc-apoyo{margin-top:52px}
+.va .rc-apoyo .box{background:linear-gradient(135deg,var(--blog-azul),#33497d);color:#fff;border-radius:16px;padding:32px 34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.va .rc-apoyo h3{margin:0 0 8px;font-size:1.6rem;font-weight:900}
+.va .rc-apoyo p{margin:0;max-width:46em;color:#dbe4f3;line-height:1.55}
+.va .rc-apoyo a{background:var(--blog-verde);color:#10321a;font-weight:700;border-radius:8px;padding:12px 22px;text-decoration:none;white-space:nowrap}
+.va .rc-apoyo a:hover{background:#7ddc89}
+.vb .rc-apoyo{background:#2b2f33;color:#fff;padding:34px 0;margin-top:48px}
+.vb .rc-apoyo .box{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.vb .rc-apoyo h3{margin:0 0 8px;font-family:var(--f-serif);font-size:1.7rem}
+.vb .rc-apoyo p{margin:0;max-width:46em;color:#d5dadd;line-height:1.55}
+.vb .rc-apoyo a{background:#2a9490;color:#fff;font-weight:700;border-radius:6px;padding:12px 22px;text-decoration:none;white-space:nowrap}
+.vb .rc-apoyo a:hover{background:#34a8a3}
+.rc-main{display:grid;grid-template-columns:250px minmax(0,1fr);gap:26px;margin-top:22px;align-items:start}
+.rc-bsec+.rc-bsec{margin-top:32px}
+.rc-tile{aspect-ratio:auto;min-height:168px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 68%,#000),color-mix(in srgb,var(--c) 38%,#000))}
+.rc-tile .dsc{position:relative;font-size:.8rem;line-height:1.35;opacity:.92;margin-top:6px}
+.rc-tile:hover{transform:none;box-shadow:0 8px 18px rgba(0,0,0,.22)}
+@media (max-width:900px){.rc-main{grid-template-columns:1fr}.va .rc-apoyo .box,.vb .rc-apoyo .box{grid-template-columns:1fr}}
+
 /* ================= BANNER INFERIOR (bloqueado) ================= */
 #zona-banner-inferior{background:#666;color:#fff;font-family:var(--f-sans);font-size:.8em;padding:15px;padding-left:max(15px,env(safe-area-inset-left,0px));padding-right:max(15px,env(safe-area-inset-right,0px))}
 #zona-banner-inferior .row{display:flex;flex-wrap:wrap;gap:14px 0;line-height:1.125em}
@@ -635,7 +685,7 @@ body{padding-bottom:0}
         <div class="perfil" style="--c:#0b2e59"><h4>Estudiantes</h4><p>Aprende a usar el software de tu carrera.</p>
           <ul><li><a href="#e1">Guías de R-Project</a></li><li><a href="#e2">Guías de STATA y SPSS</a></li><li><a href="#e3">Manuales de software</a></li><li><a href="#e4">Foros de dudas</a></li></ul></div>
         <div class="perfil" style="--c:#7ab317"><h4>Docentes</h4><p>Apoya tus clases con material listo para usar.</p>
-          <ul><li><a href="#d1">Recursos para docentes</a></li><li><a href="#d2">Software con licencia disponible</a></li><li><a href="#d3">Software libre</a></li><li><a href="#d4">Solicitar un taller para tu curso</a></li></ul></div>
+          <ul><li><a href="#recursos">Recursos para docentes</a></li><li><a href="#d2">Software con licencia disponible</a></li><li><a href="#d3">Software libre</a></li><li><a href="#d4">Solicitar un taller para tu curso</a></li></ul></div>
         <div class="perfil" style="--c:#0d6759"><h4>Egresados</h4><p>Mantente al día con las herramientas.</p>
           <ul><li><a href="#g1">Proyectos de Estudio</a></li><li><a href="#g2">Noticias y actualidad</a></li><li><a href="#g3">Manuales de software</a></li><li><a href="#g4">Escríbenos</a></li></ul></div>
       </div>
@@ -684,6 +734,7 @@ body{padding-bottom:0}
     </div>
   </section>
 </div>
+<div id="vista-recursos" class="vista" hidden></div>
 <div id="vista-pendiente" class="vista" hidden>
   <div class="caja">
     <h2 id="pend-titulo">Esta página aún no tiene propuesta</h2>
@@ -2001,6 +2052,8 @@ ol,ul{box-sizing:border-box}:host :where(.wp-block-list.has-background){padding:
     var h=(location.hash||'').slice(1);
     if(h==='propuesta')return{v:'prop',p:'inicio'};
     if(h==='propuestab')return{v:'propb',p:'inicio'};
+    if(h==='propuestab-recursos')return{v:'rec',p:'recursos',b:true};
+    if(h==='propuesta-recursos')return{v:'rec',p:'recursos'};
     if(h.indexOf('propuestab-')===0)return{v:'pend',p:h.slice(11),b:true};
     if(h.indexOf('propuesta-')===0)return{v:'pend',p:h.slice(10)};
     if(h.indexOf('actual-')===0)return{v:'actual',p:h.slice(7)};
@@ -2008,8 +2061,8 @@ ol,ul{box-sizing:border-box}:host :where(.wp-block-list.has-background){padding:
   }
   function setTabs(r){
     $('#tab-actual').setAttribute('aria-selected',r.v==='actual');
-    $('#tab-prop').setAttribute('aria-selected',r.v==='prop'||(r.v==='pend'&&!r.b));
-    $('#tab-propb').setAttribute('aria-selected',r.v==='propb'||(r.v==='pend'&&!!r.b));
+    $('#tab-prop').setAttribute('aria-selected',r.v==='prop'||((r.v==='pend'||r.v==='rec')&&!r.b));
+    $('#tab-propb').setAttribute('aria-selected',r.v==='propb'||((r.v==='pend'||r.v==='rec')&&!!r.b));
   }
   function showActual(p){
     var d=data[p];
@@ -2027,9 +2080,11 @@ ol,ul{box-sizing:border-box}:host :where(.wp-block-list.has-background){padding:
     $('#vista-propuesta').hidden=r.v!=='prop';
     $('#vista-propuestab').hidden=r.v!=='propb';
     $('#vista-pendiente').hidden=r.v!=='pend';
+    $('#vista-recursos').hidden=r.v!=='rec';
     $('#barra-comun').hidden=r.v==='actual'||r.v==='pend';
     setTabs(r);
     if(r.v==='actual')showActual(r.p);
+    if(r.v==='rec')showRec(!!r.b);
     if(r.v==='pend'){
       var n=NOMBRES[r.p]||'Esta página';
       $('#pend-titulo').textContent=NOMBRES[r.p]?n+': aún sin propuesta':'Esta página aún no tiene propuesta';
@@ -2044,25 +2099,25 @@ ol,ul{box-sizing:border-box}:host :where(.wp-block-list.has-background){padding:
   window.addEventListener('hashchange',render);
   $$('#selector-vista button').forEach(function(b){b.addEventListener('click',function(){
     var r=parse(),want=b.getAttribute('data-v');
-    if(want==='actual')location.hash=r.v==='pend'?$('#pend-actual').getAttribute('href').slice(1):'actual';
-    else location.hash=want==='propb'?'propuestab':'propuesta';
+    if(want==='actual')location.hash=r.v==='pend'?$('#pend-actual').getAttribute('href').slice(1):(r.v==='rec'?'actual-404':'actual');
+    else location.hash=(want==='propb'?'propuestab':'propuesta')+(r.v==='rec'?'-recursos':'');
   })});
   function goPend(h,b){
     if(h===''||h==='propuesta'||h==='propuestab'){location.hash=b?'propuestab':'propuesta';return}
     location.hash=(b?'propuestab-':'propuesta-')+h;
   }
-  ['#barra-comun','#vista-propuesta','#vista-propuestab'].forEach(function(sel){$(sel).addEventListener('click',function(e){
+  ['#barra-comun','#vista-propuesta','#vista-propuestab','#vista-recursos'].forEach(function(sel){$(sel).addEventListener('click',function(e){
     var a=e.target.closest('a');if(!a)return;
     var da=a.getAttribute('data-actual');
     if(da){e.preventDefault();location.hash='actual-'+da;return}
     var href=a.getAttribute('href');if(!href||href.charAt(0)!=='#')return;
-    e.preventDefault();goPend(href.slice(1),parse().v==='propb');
+    e.preventDefault();var pv=parse();goPend(href.slice(1),pv.v==='propb'||(pv.v==='rec'&&!!pv.b));
   })});
   // Propuesta B: menu lateral + paneles de tarjetas
   var BD={
     proyectos:{n:'Proyectos de Estudio',d:'Revisa los desarrollos, estudios y trabajos realizados en la UIFCE.',pre:'Proyectos de',t:[['Software libre','software-libre','#1f8a4c','#0d5c33','∞'],['Software con licencia','software-con-licencia','#8a4fb4','#5a2a87','©'],['Manuales de software','manuales-de-software','#1f5fae','#113d78','¶'],['Proyectos recientes','proyectos','#177f86','#0c5560','★']]},
     guias:{n:'Guías de software',d:'Aprendizajes visuales y herramientas para software aplicado.',pre:'Guías de',t:[['R-Project','r','#276dc3','#163f7a','R'],['STATA','stata','#1a6b7a','#0d3f4a','S'],['SPSS','spss','#8a4fb4','#5a2a87','Σ'],['MATLAB','matlab','#c2571a','#8a3508','M'],['Siigo','siigo','#1f8a4c','#0d5c33','$'],['Alegra','alegra','#177f86','#0c5560','A'],['Neuronal Tools para Excel','neuronal','#b23a48','#7a1f2b','N'],['Xubio','xubio','#33497d','#1d2c52','X']]},
-    recursos:{n:'Recursos para docentes',d:'Material especializado para apoyar procesos de enseñanza.',pre:'Recursos de',muestra:true,t:[['Material de clase','recursos','#1f5fae','#113d78','∫'],['Software disponible','software-con-licencia','#8a4fb4','#5a2a87','©'],['Talleres para tu curso','taller','#1f8a4c','#0d5c33','✎']]},
+    recursos:{n:'Recursos para docentes',d:'Herramientas digitales de apoyo a la enseñanza.',pre:'Herramientas de',t:[['Aulas virtuales','recursos','#1f5fae','#113d78','A'],['Clases sincrónicas y grabación','recursos','#177f86','#0c5560','C'],['Visualización y diagramación','recursos','#8a4fb4','#5a2a87','V'],['Evaluación y retroalimentación','recursos','#c2571a','#8a3508','E'],['Información y colaboración','recursos','#1f8a4c','#0d5c33','I'],['Bibliografía y escritura','recursos','#b23a48','#7a1f2b','B']]},
     noticias:{n:'Noticias y actualidad',d:'Mantente al día con actividades, eventos y novedades.',pre:'Noticias de',muestra:true,t:[['Últimas publicaciones','noticias','#177f86','#0c5560','№'],['Eventos y talleres','eventos','#c2571a','#8a3508','◷'],['Convocatorias','convocatorias','#b23a48','#7a1f2b','!']]},
     foros:{n:'Foros',d:'Comparte dudas e ideas y participa en la comunidad.',pre:'Foro de',muestra:true,t:[['Dudas de software','foros','#276dc3','#163f7a','?'],['Ideas y proyectos','foros-ideas','#1f8a4c','#0d5c33','✦'],['Comunidad UIFCE','foros-comunidad','#8a4fb4','#5a2a87','☺']]}
   };
@@ -2076,6 +2131,50 @@ ol,ul{box-sizing:border-box}:host :where(.wp-block-list.has-background){padding:
   }
   bMenu.addEventListener('click',function(e){var b=e.target.closest('button');if(b)bShow(b.getAttribute('data-k'))});
   bShow('proyectos');
+
+  // ---- Recursos para docentes (contenido de la Unidad; diseño propio de cada propuesta)
+  var REC=[
+    {id:'aulas',n:'Gestión académica y aulas virtuales',d:'Herramientas para organizar contenidos, actividades y seguimiento de estudiantes.',i:[['Moodle','Gestión de cursos, evaluaciones, foros y seguimiento académico','#f98012','Mo'],['Google Classroom','Organización sencilla de clases, tareas y comunicación','#1e8e3e','Gc'],['Teams','Gestión de clases, archivos y comunicación','#5059c9','Te']]},
+    {id:'sincronicas',n:'Comunicación, clases sincrónicas y grabación',d:'Para clases virtuales, híbridas y recursos audiovisuales.',i:[['Google Meet','Clases y reuniones virtuales','#00897b','Gm'],['Zoom','Videoconferencias y grabación','#2d8cff','Zo'],['OBS Studio','Grabación de clases y material audiovisual','#302e31','OB'],['Panopto','Gestión y distribución de videos educativos','#2a8a3c','Pa']]},
+    {id:'visual',n:'Visualización, diagramación y apoyo conceptual',d:'Ideales para explicar procesos, modelos y estructuras teóricas.',i:[['Canva','Presentaciones e infografías visuales','#00a4b4','Ca'],['Miro','Pizarras colaborativas para trabajo en grupo','#ffd02f','Mi','dk'],['LucidChart','Diagramas y visualización de procesos','#e8641b','Lc']]},
+    {id:'evaluacion',n:'Evaluación y retroalimentación',d:'Para pruebas, encuestas y seguimiento del aprendizaje.',i:[['Google Forms','Evaluaciones y encuestas','#7248b9','Gf'],['Microsoft Forms','Evaluación y seguimiento','#077568','Mf'],['Kahoot','Evaluaciones dinámicas','#46178f','Ka'],['Mentimeter','Participación y sondeos en clase','#2b5fa8','Me']]},
+    {id:'colaboracion',n:'Gestión de información y colaboración',d:'Para trabajo colaborativo y control de documentos.',i:[['Google Drive','Almacenamiento y trabajo colaborativo','#1fa463','Gd'],['OneDrive','Gestión de archivos institucionales','#0364b8','Od'],['GitHub educativo','Control de versiones y proyectos académicos','#24292f','GH'],['Overleaf','Edición colaborativa de documentos LaTeX','#138a07','Ov']]},
+    {id:'bibliografia',n:'Gestores de bibliografía y apoyo a la escritura académica',d:'Complemento para investigación y producción de contenidos.',i:[['Zotero','Gestión de referencias y bibliografía','#cc2936','Zo'],['Mendeley','Gestión de referencias y trabajo colaborativo','#b5202c','Mn'],['Turnitin','Revisión de similitud y apoyo a la integridad académica','#1b6ef3','Tu']]}
+  ];
+  var rcQ='',rcCat='todas',rcB=false;
+  function rcItems(c){var q=rcQ.trim().toLowerCase();return c.i.filter(function(x){return !q||x[0].toLowerCase().indexOf(q)>-1||x[1].toLowerCase().indexOf(q)>-1})}
+  function rcDraw(){
+    var out='',any=false;
+    REC.forEach(function(c){
+      if(rcB&&rcCat!=='todas'&&rcCat!==c.id)return;
+      var it=rcItems(c);if(!it.length)return;any=true;
+      if(!rcB){
+        out+='<section class="rc-sec" id="rc-sec-'+c.id+'"><h3>'+esc(c.n)+'</h3><p class="d">'+esc(c.d)+'</p><div class="rc-grid">'+it.map(function(x){return '<article class="rc-card"><span class="mono'+(x[4]?' dk':'')+'" style="--c:'+x[2]+'" aria-hidden="true">'+esc(x[3])+'</span><div><h4>'+esc(x[0])+'</h4><p>'+esc(x[1])+'</p></div></article>'}).join('')+'</div></section>';
+      }else{
+        out+='<div class="rc-bsec"><div class="b-panel-h"><h3>'+esc(c.n)+'</h3><p>'+esc(c.d)+'</p></div><div class="b-tiles">'+it.map(function(x){return '<div class="b-tile rc-tile" style="--c:'+x[2]+'"><span class="g" aria-hidden="true">'+esc(x[3])+'</span><strong>'+esc(x[0])+'</strong><span class="dsc">'+esc(x[1])+'</span></div>'}).join('')+'</div></div>';
+      }
+    });
+    $('#rcContent').innerHTML=any?out:'<p class="rc-vacio">No hay herramientas que coincidan con tu búsqueda.</p>';
+  }
+  function showRec(b){
+    var el=$('#vista-recursos');
+    el.className='vista '+(b?'vb':'va');
+    if(el.getAttribute('data-built')===(b?'b':'a'))return;
+    el.setAttribute('data-built',b?'b':'a');rcB=b;rcQ='';rcCat='todas';
+    var home=b?'#propuestab':'#propuesta',tot=REC.reduce(function(s,c){return s+c.i.length},0);
+    var menu=b?'<div class="b-menu" id="rcMenu" role="tablist" aria-orientation="vertical" aria-label="Categorías de herramientas"><button type="button" role="tab" data-c="todas" aria-selected="true">Todas ('+tot+')</button>'+REC.map(function(c){return '<button type="button" role="tab" data-c="'+c.id+'" aria-selected="false">'+esc(c.n.split(',')[0].replace(' y apoyo conceptual','').replace(' y apoyo a la escritura académica',''))+'</button>'}).join('')+'</div>':'';
+    var chips=!b?'<div class="rc-chips" id="rcChips">'+REC.map(function(c){return '<button type="button" class="rc-chip" data-c="'+c.id+'">'+esc(c.n.split(',')[0].replace(' y apoyo conceptual','').replace(' y apoyo a la escritura académica',''))+'<b>'+c.i.length+'</b></button>'}).join('')+'</div>':'';
+    el.innerHTML='<div class="rc-crumb"><div class="rc-wrap">Está aquí: <a href="'+home+'">Inicio</a> / Recursos para docentes</div></div><div class="rc-wrap"><header class="rc-head"><h2>Recursos para docentes</h2><p class="lead">Herramientas digitales que la Unidad de Informática apoya para enseñar: aulas virtuales, clases en línea, evaluación, colaboración y escritura académica.</p><form class="rc-filter" role="search" onsubmit="return false"><input id="rcq" type="search" placeholder="Buscar herramienta" aria-label="Buscar herramienta"></form></header>'+chips+(b?'<div class="rc-main">'+menu+'<div id="rcContent"></div></div>':'<div id="rcContent"></div>')+'</div>'+
+      '<section class="rc-apoyo"><div class="rc-wrap"><div class="box"><div><h3>Apoyos académicos</h3><p>La Unidad de Informática presta apoyo en diversos softwares aplicados a las ciencias económicas. Para conocer con más detalle los apoyos académicos disponibles y acceder al aplicativo para solicitar un apoyo, visita la sección de servicios informáticos del micrositio.</p></div><a href="#servicios-informaticos">Ir a servicios informáticos</a></div></div></section>';
+    rcDraw();
+  }
+  $('#vista-recursos').addEventListener('input',function(e){if(e.target.id==='rcq'){rcQ=e.target.value;rcDraw()}});
+  $('#vista-recursos').addEventListener('click',function(e){
+    var m=e.target.closest('#rcMenu button');
+    if(m){rcCat=m.getAttribute('data-c');$$('#rcMenu button').forEach(function(x){x.setAttribute('aria-selected',x===m)});rcDraw();return}
+    var c=e.target.closest('#rcChips .rc-chip');
+    if(c){var s=$('#rc-sec-'+c.getAttribute('data-c'));if(s)s.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
   // actual: interacciones del sitio original
   root.addEventListener('click',function(e){
     var a=e.target.closest('a');
@@ -2090,6 +2189,3 @@ ol,ul{box-sizing:border-box}:host :where(.wp-block-list.has-background){padding:
   render();
 })();
 </script>
-
-</body>
-</html>
